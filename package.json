@@ -1,5 +1,6 @@
 {
   "name": "sales_record",
+  "productName": "Sales Record",
   "version": "0.0.1",
   "description": "A tool intended to record sales and receive reminders to solicit new business",
   "main": "main.js",
