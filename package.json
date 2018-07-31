@@ -1,0 +1,26 @@
+{
+  "name": "sales_record",
+  "version": "0.0.1",
+  "description": "A tool intended to record sales and receive reminders to solicit new business",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "https://github.com/melo0187/sales_record.git",
+  "keywords": [
+    "Sales",
+    "Commerce",
+    "Customer-Retention",
+    "Desktop-App",
+    "Electron"
+  ],
+  "author": "Carmelo Scollo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/melo0187/sales_record/issues"
+  },
+  "homepage": "https://github.com/melo0187/sales_record#readme",
+  "devDependencies": {
+    "electron": "^2.0.5"
+  }
+}
