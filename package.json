@@ -5,6 +5,7 @@
   "description": "A tool intended to record sales and receive reminders to solicit new business",
   "main": "main.js",
   "scripts": {
+    "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": "https://github.com/melo0187/sales_record.git",
