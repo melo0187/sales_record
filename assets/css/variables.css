@@ -16,4 +16,5 @@
 
 /* Category Colors */
 
-.u-category-sales        { --color-accent: hsl(330, 65%, 48%); }
+.u-category-sales   { --color-accent: hsl(330, 65%, 48%); }
+.u-category-alerts  { --color-accent: hsl(22, 65%, 48%);}
