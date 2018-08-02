@@ -55,4 +55,5 @@ function hideAllSectionsAndDeselectButtons () {
 }
 
 // Default to the view of the default section
+showMainContent()
 activateDefaultSection()
