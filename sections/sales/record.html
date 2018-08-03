@@ -11,7 +11,64 @@
     <div class="view">
       <div class="view-wrapper">
         <div class="view-box">
-          <p>Form goes here</p>
+          <form>
+            <div>
+              <label for="last-name">Nachname</label>
+              <input type="text" id="last-name" name="last-name">
+              <label for="first-name">Vorname</label>
+              <input type="text" id="first-name" name="first-name">
+            </div>
+            <div>
+              <label for="email">E-Mail</label>
+              <input type="email" id="email" name="email">
+            </div>
+            <div>
+              <label for="address">Adresse</label>
+              <textarea name="address" id="address"></textarea>
+            </div>
+            <div>
+              <label for="sales-type">Verkaufter Artikel</label>
+              <input type="text" id="sales-type" name="sales-type">
+            </div>
+            <div>
+              <label for="sales-date">Verkaufsdatum</label>
+              <input type="date" name="sales-date" id="sales-date">
+            </div>
+            <div>
+              <fieldset>
+                <legend>Kunden hierzu erneut kontaktieren?</legend>
+                <ul>
+                  <li>
+                    <label for="yes">Ja</label>
+                    <input type="radio" name="remind" id="yes" value="true">
+                  </li>
+                  <li>
+                    <label for="no">Nein</label>
+                    <input type="radio" checked name="remind" id="no" value="false">
+                  </li>
+                </ul>
+                <select disabled name="remind-in" id="remind-in">
+                    <option value="0">Nicht kontaktieren</option>
+                    <option value="1">In 1 Monat</option>
+                    <option value="2">In 2 Monaten</option>
+                    <option value="3">In 3 Monaten</option>
+                    <option value="4">In 4 Monaten</option>
+                    <option value="5">In 5 Monaten</option>
+                    <option value="6">In 6 Monaten</option>
+                    <option value="7">In 7 Monaten</option>
+                    <option value="8">In 8 Monaten</option>
+                    <option value="9">In 9 Monaten</option>
+                    <option value="10">In 10 Monaten</option>
+                    <option value="11">In 11 Monaten</option>
+                    <option value="12">In 12 Monaten</option>
+                  </select>
+              </fieldset>
+              <label for="remind-in"></label>
+            </div>
+            <div class="button">
+              <button id="save-salesrecord">Speichern</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
