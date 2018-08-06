@@ -80,14 +80,14 @@
 }
 .nav-button:hover,
 .nav-button:focus:not(.is-selected) {
-  background-color: hsla(0,0%,0%,.1);
+  background-color: var(--color-hover);
 }
 .nav-button.is-selected {
   background-color: var(--color-accent);
 }
 .nav-button.is-selected,
 .nav-button.is-selected em {
-  color: #fff;
+  color: var(--color-onaccent);
 }
 .nav-button.is-selected:focus {
   opacity: .8;
