@@ -1,6 +1,6 @@
 const electron = require('electron');
-const url = require('url');
 const path = require('path');
+const glob = require('glob')
 
 const { app, BrowserWindow } = electron;
 
@@ -8,6 +8,8 @@ let mainWindow = null
 
 const shouldQuit = makeSingleInstance()
 if (shouldQuit) return app.quit()
+
+loadMainModules()
 
 function createWindow() {
   const windowOptions = {
@@ -61,4 +63,10 @@ function makeSingleInstance() {
       mainWindow.focus()
     }
   })
+}
+
+// Require each JS file in the main-process dir
+function loadMainModules () {
+  const files = glob.sync(path.join(__dirname, 'main-process/**/*.js'))
+  files.forEach((file) => { require(file) })
 }

@@ -19,21 +19,17 @@
                 <th>Verkaufsgegenstand</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>06.08.2018</td>
-                <td>Jon Doe</td>
-                <td>ACS</td>
-              </tr>
-              <tr>
-                <td>05.08.2018</td>
-                <td>Jane Doe</td>
-                <td>Kompressionsstrümpfe</td>
-              </tr>
+            <tbody id="sales-records">
+              <!-- content to be loaded and added by renderer-process -->
             </tbody>
           </table>
         </div>
       </div>
     </div>
+
+    <script type="text/javascript">
+      require('./renderer-process/sales/sales-history.js')
+    </script>
+
   </section>
 </template>
