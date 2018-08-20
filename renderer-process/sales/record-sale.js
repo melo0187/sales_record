@@ -47,13 +47,13 @@ function setupSaveBtn() {
     event.preventDefault();
 
     salesRecord = {
-      "lastName": lastNameInput.value,
-      "firstName": firstNameInput.value,
-      "email": emailInput.value,
-      "address": addressTextArea.value,
-      "soldItem": soldItemInput.value,
-      "salesDate": salesDateInput.value,
-      "remindInXMonths": remindYesRadioBtn.checked ? remindInSelection.value : 0
+      lastName: lastNameInput.value,
+      firstName: firstNameInput.value,
+      email: emailInput.value,
+      address: addressTextArea.value,
+      soldItem: soldItemInput.value,
+      salesDate: salesDateInput.value,
+      remindInXMonths: remindYesRadioBtn.checked ? remindInSelection.value : 0
     };
     ipcRenderer.send('sales:record', salesRecord)
   });
