@@ -52,7 +52,7 @@ function setupSaveBtn() {
       "email": emailInput.value,
       "address": addressTextArea.value,
       "soldItem": soldItemInput.value,
-      "salesDate": Date(salesDateInput.value),
+      "salesDate": salesDateInput.value,
       "remindInXMonths": remindYesRadioBtn.checked ? remindInSelection.value : 0
     };
     ipcRenderer.send('sales:record', salesRecord)

@@ -8,8 +8,7 @@ ipcRenderer.on('sales:recorded', (event, arg) => {
   const tr = document.createElement('tr')
 
   const td_date = document.createElement('td')
-  const date_text = document.createTextNode(arg.salesDate)
-  // ToDo: Transform the date string to the desired format (tbd)
+  const date_text = document.createTextNode(new Date(arg.salesDate).toLocaleDateString('de-DE'))
   td_date.appendChild(date_text)
 
   const td_name = document.createElement('td')
