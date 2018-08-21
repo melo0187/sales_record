@@ -16,11 +16,12 @@
               <tr>
                 <th>Ausstehend seit</th>
                 <th>Kundenname</th>
-                <th>Verkaufsdetails</th>
+                <th>Benachrichtigungsgrund</th>
                 <th>Aktionen</th>
               </tr>
             </thead>
             <tbody>
+              <!-- content to be added by renderer-process
               <tr>
                 <td>05.08.2018</td>
                 <td>Jon Doe</td>
@@ -33,11 +34,17 @@
                 <td>Kompressionsstrümpfe verkauft am 06.02.2018</td>
                 <td>tbd</td>
               </tr>
+              -->
             </tbody>
           </table>
           <button id="export-reminders">Serienbrief Export</button>
         </div>
       </div>
     </div>
+
+    <script type="text/javascript">
+      require('./renderer-process/alerts/pending-customer-contacts.js')
+    </script>
+
   </section>
 </template>
