@@ -7,21 +7,21 @@ ipcRenderer.on('sales:recorded', (event, arg) => {
 
   const tr = document.createElement('tr')
 
-  const td_date = document.createElement('td')
-  const date_text = document.createTextNode(new Date(arg.salesDate).toLocaleDateString('de-DE'))
-  td_date.appendChild(date_text)
+  const tdDate = document.createElement('td')
+  const dateText = document.createTextNode(new Date(arg.salesDate).toLocaleDateString('de-DE'))
+  tdDate.appendChild(dateText)
 
-  const td_name = document.createElement('td')
-  const name_text = document.createTextNode(`${arg.firstName} ${arg.lastName}`)
-  td_name.appendChild(name_text)
+  const tdName = document.createElement('td')
+  const nameText = document.createTextNode(`${arg.firstName} ${arg.lastName}`)
+  tdName.appendChild(nameText)
 
-  const td_item = document.createElement('td')
-  const item_text = document.createTextNode(arg.soldItem)
-  td_item.appendChild(item_text)
+  const tdItem = document.createElement('td')
+  const itemText = document.createTextNode(arg.soldItem)
+  tdItem.appendChild(itemText)
 
-  tr.appendChild(td_date)
-  tr.appendChild(td_name)
-  tr.appendChild(td_item)
+  tr.appendChild(tdDate)
+  tr.appendChild(tdName)
+  tr.appendChild(tdItem)
 
   tbody.appendChild(tr)
 })

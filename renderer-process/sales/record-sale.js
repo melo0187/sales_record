@@ -1,14 +1,14 @@
 const {ipcRenderer} = require('electron')
 
-const remindInSelection = document.getElementById('remind-in');
-const remindYesRadioBtn = document.getElementById('yes');
+const remindInSelection = document.getElementById('remind-in')
+const remindYesRadioBtn = document.getElementById('yes')
 
-setupRemindInSelect();
-setupSaveBtn();
+setupRemindInSelect()
+setupSaveBtn()
 
-function setupRemindInSelect() {
-  const remindInNever = remindInSelection.options[0];
-  const remindNoRadioBtn = document.getElementById('no');
+function setupRemindInSelect () {
+  const remindInNever = remindInSelection.options[0]
+  const remindNoRadioBtn = document.getElementById('no')
 
   /**
    * Determine whether select should be disabled based on which radio
@@ -23,30 +23,30 @@ function setupRemindInSelect() {
   const setSelectionActivation = (event) => {
     remindYesRadioBtn.checked
       ? remindInSelection.disabled = false
-      : remindInSelection.disabled = true;
+      : remindInSelection.disabled = true
 
     remindInSelection.disabled
       ? remindInSelection.options = remindInSelection.options.add(remindInNever, 0)
-      : remindInSelection.options[0] = null;
-  };
+      : remindInSelection.options[0] = null
+  }
 
-  remindYesRadioBtn.addEventListener('click', setSelectionActivation);
-  remindNoRadioBtn.addEventListener('click', setSelectionActivation);
+  remindYesRadioBtn.addEventListener('click', setSelectionActivation)
+  remindNoRadioBtn.addEventListener('click', setSelectionActivation)
 }
 
-function setupSaveBtn() {
-  const saveBtn = document.getElementById('save-salesrecord');
-  const lastNameInput = document.getElementById('last-name');
-  const firstNameInput = document.getElementById('first-name');
-  const emailInput = document.getElementById('email');
-  const addressTextArea = document.getElementById('address');
-  const soldItemInput = document.getElementById('sold-item');
-  const salesDateInput = document.getElementById('sales-date');
+function setupSaveBtn () {
+  const saveBtn = document.getElementById('save-salesrecord')
+  const lastNameInput = document.getElementById('last-name')
+  const firstNameInput = document.getElementById('first-name')
+  const emailInput = document.getElementById('email')
+  const addressTextArea = document.getElementById('address')
+  const soldItemInput = document.getElementById('sold-item')
+  const salesDateInput = document.getElementById('sales-date')
 
   saveBtn.addEventListener('click', (event) => {
-    event.preventDefault();
+    event.preventDefault()
 
-    salesRecord = {
+    const salesRecord = {
       lastName: lastNameInput.value,
       firstName: firstNameInput.value,
       email: emailInput.value,
@@ -54,9 +54,9 @@ function setupSaveBtn() {
       soldItem: soldItemInput.value,
       salesDate: salesDateInput.value,
       remindInXMonths: remindYesRadioBtn.checked ? remindInSelection.value : 0
-    };
+    }
     ipcRenderer.send('sales:record', salesRecord)
-  });
+  })
 
   ipcRenderer.on('sales:recorded', (event, arg) => {
     console.log(`Main process stored the sale of ${arg.soldItem} to ${arg.lastName} ${arg.firstName}`)

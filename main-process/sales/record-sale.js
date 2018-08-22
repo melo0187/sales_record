@@ -6,11 +6,11 @@ ipcMain.on('sales:record', (event, arg) => {
   event.sender.send('sales:recorded', arg)
 
   if (arg.remindInXMonths !== 0) {
-    const salesDate = new Date(arg.salesDate), y = salesDate.getFullYear(), m = salesDate.getMonth(), d = salesDate.getDate();
+    const salesDate = new Date(arg.salesDate)
     const contactOn = new Date(salesDate)
     contactOn.setMonth(contactOn.getMonth() + Number.parseInt(arg.remindInXMonths))
 
-    reminder = {
+    const reminder = {
       contactOn,
       toBeContacted: `${arg.firstName} ${arg.lastName}`,
       reason: `${arg.soldItem} verkauft am ${salesDate.toLocaleDateString('de-DE')}`

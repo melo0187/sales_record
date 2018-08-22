@@ -31,11 +31,11 @@ describe('Sales Record app', function () {
     })
   }
 
-  const restartApp = () => {
+  /* const restartApp = () => {
     return app.restart().then((ret) => {
       setup.setupApp(ret)
     })
-  }
+  } */
 
   before(() => {
     setup.removeStoredPreferences()
@@ -115,7 +115,7 @@ describe('Sales Record app', function () {
     return app.client/* .dismissAboutPage() */
       .auditSectionAccessibility('record')
       .auditSectionAccessibility('history')
-      .auditSectionAccessibility('pending-customer-contacts')/* 
+      .auditSectionAccessibility('pending-customer-contacts')/*
       .auditSectionAccessibility('shortcuts')
       .auditSectionAccessibility('ex-links-file-manager')
       .auditSectionAccessibility('notifications')
