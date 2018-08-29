@@ -25,7 +25,8 @@
   },
   "homepage": "https://github.com/melo0187/sales_record#readme",
   "dependencies": {
-    "electron": "^2.0.8"
+    "electron": "^2.0.8",
+    "validator": "^10.7.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
